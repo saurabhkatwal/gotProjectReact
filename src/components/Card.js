@@ -1,5 +1,5 @@
 import React from 'react'
-
+import "./css/Card.css"
 export default function Card({personInfo}) {
   
   let image=personInfo.image;

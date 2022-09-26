@@ -1,0 +1,12 @@
+.personCard{
+    background-color: #1ed1c8;
+    border-radius: 10px;
+    text-align: center;
+    padding: 1rem;
+}
+a{
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 14px;
+}
