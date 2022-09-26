@@ -6,7 +6,7 @@ export default function Toggler(props) {
     // console.log(houseNames);
   return <div className="buttons">
     {houses.map(house=>(
-      <Button>{house}</Button>
+      <Button key={"id"+Math.random().toString(16).slice(2)}>{house}</Button>
     ))}
   </div>
 

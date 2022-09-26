@@ -1,10 +1,14 @@
 import React from 'react'
-
+import Card from './Card'
 export default function Cards(props) {
-    console.log(props.houses);
+  let people=props.people;
+  console.log(people);
   return (
-    <div>
-      
-    </div>
+    <div className='peopleCards'>
+      {
+      people.map(person=><Card personInfo={person}/>
+      )
+}
+     </div>
   )
 }
