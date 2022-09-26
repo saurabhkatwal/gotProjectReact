@@ -1,14 +1,15 @@
 import React from 'react'
 import Button from "./Button";
 export default function Toggler(props) {
+  let houses=props.houses;
     // console.log(props.houses);
-    let data=props.houses;
-    let houseNames=data.map(item=>{
-        return item.name;
-    })
     // console.log(houseNames);
-  return houseNames.forEach(house=>{
-        <Button houseName={house}/>
-    })
-  
+  return <div className="buttons">
+    {houses.map(house=>(
+      <Button>{house}</Button>
+    ))}
+  </div>
+
 }
+
+
