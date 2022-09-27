@@ -38,8 +38,17 @@ function clickHandler(e){
 function inputFocusHandler(){
 setList(peopleList);
 }
+function keyUpEventHandler(e){
+  let currValue=e.target.value;
+  currValue=currValue.toLowerCase();
+  let filteredList=peopleList.filter(person=>{
+    let personName=person.name.toLowerCase();
+    return personName.includes(currValue);
+  })
+  setList(filteredList);
+}
   return <div className="root">
-    <NavBar inputFocusHandler={inputFocusHandler}/>
+    <NavBar inputFocusHandler={inputFocusHandler} keyUpEventHandler={keyUpEventHandler}/>
     <Toggler clickHandler={clickHandler} houses={houseNames}/>
     <Cards people={list}/>
   </div>
