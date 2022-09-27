@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Button from "./Button";
 import "./css/Toggler.css"
 export default function Toggler(props) {
@@ -7,7 +7,7 @@ export default function Toggler(props) {
     // console.log(houseNames);
   return <div className="buttons">
     {houses.map(house=>(
-      <Button key={"id"+Math.random().toString(16).slice(2)}>{house}</Button>
+      <Button clickHandler={props.clickHandler} key={"id"+Math.random().toString(16).slice(2)}>{house}</Button>
     ))}
   </div>
 

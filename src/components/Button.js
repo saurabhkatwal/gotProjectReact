@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./css/Button.css"
 export default function Button(props) {
+  
     // console.log(props.houseName);
   return (
-    <button>{props.children}</button>
+    <button onClick={props.clickHandler}>{props.children}</button>
   )
 }
